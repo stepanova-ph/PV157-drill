@@ -394,7 +394,7 @@ function attachSettingsListeners() {
 async function init() {
   try {
     // Load questions
-    const response = await fetch('./questions.json');
+    const response = await fetch('./data/questions.json');
     allQuestions = await response.json();
     
     console.log(`✅ Loaded ${allQuestions.length} questions`);
