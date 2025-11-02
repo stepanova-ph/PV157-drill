@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PV157 Quiz - Procvičování</title>
+  <script type="module" crossorigin src="/assets/index-D0WlzYx5.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-kNNKwbiV.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>PV157 Quiz</h1>
+      <button class="btn-settings" id="btn-settings">⚙️ Nastavení</button>
+    </header>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel" id="settings-panel">
+      <h3>Nastavení</h3>
+      
+      <div class="setting-group">
+        <h4>Zobrazení u otázek</h4>
+        <label><input type="checkbox" id="setting-show-categories" checked> Kategorie</label>
+        <label><input type="checkbox" id="setting-show-answer-count" checked> Počet odpovědí</label>
+        <label><input type="checkbox" id="setting-show-stats" checked> Statistiky správnosti</label>
+      </div>
+      
+      <div class="setting-group">
+        <h4>Ukládání</h4>
+        <label><input type="checkbox" id="setting-save-stats" checked> Ukládat statistiky do cookies</label>
+      </div>
+      
+      <div class="setting-group">
+        <button class="btn btn-danger" id="btn-clear-stats">🗑️ Smazat všechny statistiky</button>
+      </div>
+      
+      <button class="btn" id="btn-close-settings">Zavřít</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <div class="filter-section">
+        <label>Pořadí:</label>
+        <select id="order-select">
+          <option value="sequential">Podle JSON</option>
+          <option value="random">Náhodné</option>
+        </select>
+      </div>
+      
+      <div class="filter-section">
+        <label>Kategorie:</label>
+        <div id="category-filters"></div>
+      </div>
+      
+      <div class="filter-section">
+        <label>Typ:</label>
+        <label><input type="checkbox" name="type-filter" value="single" checked> Single</label>
+        <label><input type="checkbox" name="type-filter" value="multiple" checked> Multiple</label>
+      </div>
+      
+      <div class="filter-section">
+        <label>Více než <input type="number" id="wrong-threshold" value="2" min="0" style="width: 50px;"> × špatně</label>
+        <label><input type="checkbox" id="filter-wrong"> Povolit filtr</label>
+      </div>
+    </div>
+
+    <!-- Question Display -->
+    <div class="question-container" id="question-container">
+      <p class="info">Načítání...</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <button class="btn" id="btn-prev">← Předchozí</button>
+      <span class="counter" id="counter">0 / 0</span>
+      <button class="btn" id="btn-next">Další →</button>
+    </div>
+  </div>
+
+</body>
+</html>
